@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scott Hancock - Resume</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Replaced with real picture -->
+            <img src="./picture.jpg" alt="Scott Hancock Profile Picture">
+            <h1>Scott Hancock</h1>
+            <p>Full-Stack Software Engineer</p>
+        </header>
+        <main>
+            <section class="acordian"> 
+                <h2>Experience & Projects</h2>
+                <details class="acordian-item">
+                    <summary>AI Algorithmic Trading Engine</summary>
+                    <p>Python, Time-Series ML, REST/WebSocket APIs (2023 - Present)</p>
+                    <ul>
+                        <li>Engineered an automated trading engine in Python connecting to live exchange APIs for real-time market data streaming and order execution.</li>
+                        <li>Evaluated and benchmarked multiple time-series architectures (GBM, RNN, LSTM, GRU) to analyze price action and predict market momentum.</li>
+                        <li>Built automated data pipelines to preprocess raw market feeds and extract technical indicators for model inference.</li>
+                    </ul>
+                </details>
+                <details class="acordian-item">
+                    <summary>Groundwater Pro</summary>
+                    <p>Software Engineer (2022 - 2023)</p>
+                    <ul>
+                        <li>Engineered and containerized full-stack CRM microservices using Docker, Spring Boot, Node.js, and React.</li>
+                        <li>Architected normalized SQL database schemas and optimized indexing to reduce database response times.</li>
+                        <li>Developed responsive web and mobile interfaces using React, React Native, and Material-UI (MUI).</li>
+                    </ul>
+                </details>
+            </section>
+
+            <section class="acordian" id="skills">
+                <h2>Skills</h2>
+                <details class="acordian-item">
+                    <summary>Technical Skills</summary>
+                    <table>
+                        <tr>
+                            <td>Languages</td>
+                            <td>Python, Java, TypeScript, JavaScript, SQL, C++, C</td>
+                        </tr>
+                        <tr>
+                            <td>Frameworks</td>
+                            <td>Spring Boot, Node.js, Express, React, React Native, MUI</td>
+                        </tr>
+                        <tr>
+                            <td>Databases</td>
+                            <td>SQL Server, PostgreSQL</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>Docker, RESTful APIs, GitHub Actions, Linux</td>
+                        </tr>
+                    </table>
+                </details>
+            </section>
+
+            <section class="acordian" id="education">
+                <h2>Education</h2>
+                <details class="acordian-item">
+                    <summary>City University of Seattle</summary>
+                    <p>B.S. in Data Science (Expected 2027)</p>
+                </details>
+                <details class="acordian-item">
+                    <summary>Folsom Lake College</summary>
+                    <p>A.S. in Computer Science (2017 - 2020)</p>
+                </details>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Contact</h3>
+            <p>
+                <a href="mailto:scotthancock30@gmail.com">📧 scotthancock30@gmail.com</a>
+                <a href="tel:+12092177040">📞 (209) 217-7040</a>
+            </p>
+            <p>
+                <a href="https://linkedin.com/in/scott-hancock-b23a69331">LinkedIn</a>
+                <a href="https://github.com/scotthancock03">GitHub</a>
+            </p>
+            <p>&copy; 2026 Scott Hancock. All rights reserved.</p>
+        </footer>
+
+        <script>
+        // Make <details> behave like an exclusive accordion (only one open per section)
+        document.querySelectorAll('.acordian').forEach(section => {
+          section.addEventListener('click', e => {
+            if (e.target.tagName.toLowerCase() === 'summary') {
+              const clicked = e.target.parentElement;
+              section.querySelectorAll('details.acordian-item').forEach(d => {
+                if (d !== clicked) d.removeAttribute('open');
+              });
+            }
+          });
+        });
+        </script>
+    </body>
+</html>
